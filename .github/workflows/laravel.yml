@@ -41,6 +41,8 @@ jobs:
   deploy:
     needs: testing
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+
     steps:
       - name: Deploying to server
         uses: appleboy/ssh-action@v0.1.10
