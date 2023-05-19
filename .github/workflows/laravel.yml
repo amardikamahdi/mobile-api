@@ -19,6 +19,8 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: Changing vite config
+        run: mv vite.config.prod.js vite.config.js
       - name: Install NPM Dependencies
         run: npm install && npm run build
       - name: Generate key
