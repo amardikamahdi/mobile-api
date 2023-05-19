@@ -14,5 +14,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-vite.config.dev.js
-vite.config.prod.js
+vite.config*.js
