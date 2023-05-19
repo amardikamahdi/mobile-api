@@ -52,6 +52,7 @@ jobs:
         script: |
           cd /htdocs/mobile-api.amardikamahdi.me/
           git pull origin master
+          mv vite.config.prod.js vite.config.js
           composer install
           npm install
           npm run build
