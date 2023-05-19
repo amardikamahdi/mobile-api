@@ -50,7 +50,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
           script: |
-            cd /htdocs/mobile-api.amardikamahdi.me/
+            cd htdocs/mobile-api.amardikamahdi.me
             git pull origin master
             mv vite.config.prod.js vite.config.js
             composer install
