@@ -99,7 +99,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="text-center"> © 2022. <a href="/" class="router-link-active">VRISTO</a> All Rights
+                <p class="text-center"> © 2022. <a href="/" class="router-link-active">Amerdev</a> All Rights
                     Reserved.</p>
             </div>
         </div>

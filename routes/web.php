@@ -1,8 +1,31 @@
 <?php
 
+use App\Http\Controllers\Web\Auth\LoginController;
+use App\Http\Controllers\Web\Auth\LogoutController;
+use App\Http\Controllers\Web\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'index');
+// Redirect blank routes to dashboard
+Route::redirect('/', '/dashboard/analytics');
+
+// Auth Routes
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'show'])->name('login');
+    Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
+});
+
+Route::middleware('auth')->group(function () {
+    // Logout
+    Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+    // Dashboard
+    Route::name('dashboard.')->prefix('dashboard')->group(function () {
+        Route::get('/analytics', [DashboardController::class, 'analytics'])->name('analytics');
+        Route::get('/finance', [DashboardController::class, 'finance'])->name('finance');
+    });
+});
+
+// Route::view('/', 'index');
 Route::view('/analytics', 'analytics');
 Route::view('/finance', 'finance');
 Route::view('/crypto', 'crypto');

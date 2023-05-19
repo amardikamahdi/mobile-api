@@ -95,7 +95,7 @@
                                 d="M7.00005 7.82959L5.30358 9.35641C3.76102 10.7447 2.98975 11.4389 2.98975 12.3296C2.98975 13.2203 3.76102 13.9145 5.30358 15.3028L7.00005 16.8296"
                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        <span class="text-primary">How to install VRISTO Admin</span>
+                        <span class="text-primary">How to install Amerdev Admin</span>
                         <div class="ltr:ml-auto  rtl:mr-auto flex">
 
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
