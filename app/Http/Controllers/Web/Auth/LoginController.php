@@ -11,13 +11,14 @@ class LoginController extends Controller
 {
     public function show()
     {
-        return view('auth.cover-login');
+        return view('auth.login');
     }
 
     public function authenticate(LoginRequest $request)
     {
         try {
-            Auth::attempt($request->validated());
+            info($request->validated());
+            Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember ?? 0);
 
             return redirect()->route('dashboard.analytics');
         } catch (\Exception $e) {

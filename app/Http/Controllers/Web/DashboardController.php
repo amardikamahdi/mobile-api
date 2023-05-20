@@ -9,11 +9,11 @@ class DashboardController extends Controller
 {
     public function analytics()
     {
-        return view('analytics');
+        return view('dashboard.analytics');
     }
 
     public function finance()
     {
-        return view('finance');
+        return view('dashboard.finance');
     }
 }
