@@ -24,6 +24,7 @@ class LoginRequest extends FormRequest
         return [
             'email' => ['required', 'email'],
             'password' => ['required'],
+            'remember' => ['nullable', 'boolean'],
         ];
     }
 
@@ -35,6 +36,7 @@ class LoginRequest extends FormRequest
         return [
             'email' => 'Email',
             'password' => 'Password',
+            'remember' => 'Ingat Saya',
         ];
     }
 
@@ -44,9 +46,10 @@ class LoginRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'email.required' => 'Email is required.',
-            'email.email' => 'Email must be a valid email address.',
-            'password.required' => 'Password is required.',
+            'email.required' => 'Masukkan email anda.',
+            'email.email' => 'Masukkan email yang valid.',
+            'password.required' => 'Masukkan password anda.',
+            'remember.boolean' => 'Remember Me harus berupa check / uncheck',
         ];
     }
 }
